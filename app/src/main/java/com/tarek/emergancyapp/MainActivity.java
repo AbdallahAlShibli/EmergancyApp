@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -33,23 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
         emergency = findViewById(R.id.emergency_call);
         emergency.setOnClickListener(view -> {
-            MediaPlayer mediaPlayer = new MediaPlayer();
-            try {
-                try {
-                    mediaPlayer.setDataSource("file:///assets/alarm.wav");
-                    mediaPlayer.prepare();
-                    mediaPlayer.start();
-                    mediaPlayer.setLooping(true);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } catch (IllegalArgumentException e) {
-                e.printStackTrace();
-            } catch (IllegalStateException e) {
-                e.printStackTrace();
-            } catch (SecurityException e) {
-                e.printStackTrace();
-            }
+
+
+            int resID = getResources().getIdentifier("alert0", "raw", getPackageName());
+
+            MediaPlayer mediaPlayer = MediaPlayer.create(this, resID);
+            mediaPlayer.start();
+            mediaPlayer.setLooping(true);
+
 
             CollectionReference userData = Ff.collection("status");
             Map<String, Object> data1 = new HashMap<>();
@@ -57,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 Thread.sleep(4000);
-                mediaPlayer.stop();
                 userData.document(FA.getUid()).set(data1);
                 Toast.makeText(getApplicationContext(), "Alert sent to the hospital!", Toast.LENGTH_SHORT).show();
 
@@ -65,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
                 Thread.currentThread().interrupt();
             }
 
+            try {
+                try {
+                    Thread.sleep(20000);
+                    mediaPlayer.stop();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } catch (IllegalStateException e) {
+                e.printStackTrace();
+            }
 
         });
     }
