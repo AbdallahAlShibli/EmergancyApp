@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "222880916673",
+    "project_id": "emergency-app-1353b",
+    "storage_bucket": "emergency-app-1353b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222880916673:android:da903c022c568e06a56040",
+        "android_client_info": {
+          "package_name": "com.tarek.emergancyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222880916673-8l6ae0bhd4baef7k042dnu8f0ibaa4b6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tarek.emergancyapp",
+            "certificate_hash": "1e5e543f6876b7d5055424ef7306d5eda0ef8ee3"
+          }
+        },
+        {
+          "client_id": "222880916673-anddum9l9b0f56i262nekhbd67fc5q8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJea_a5dkKV1-3D7hvYhN3tx4WKK8wOLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222880916673-anddum9l9b0f56i262nekhbd67fc5q8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

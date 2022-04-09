@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="90dp"
+            android:layout_height="83dp"
+            android:background="@drawable/ic_notsh"/>
+
+        <Button
+            android:id="@+id/sign_out"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ic_sign_out" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="345dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="31dp"
+            android:text="Emergency Application " />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="111dp"
+            android:padding="15dp"
+            android:text="Your data was received by hospital
+When you call us we will be with you shortly"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/emergency_call"
+            android:layout_width="199dp"
+            android:layout_height="203dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:textSize="25dp"
+            android:background="@drawable/ic_emergencybutton"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:text="Emergency Call" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
