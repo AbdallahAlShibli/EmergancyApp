@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SplashActivity extends AppCompatActivity {
-    private MaterialButton enter;
+    private Button enter;
 
 
     private FirebaseAuth FA = FirebaseAuth.getInstance();

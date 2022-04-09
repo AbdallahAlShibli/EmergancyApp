@@ -35,7 +35,7 @@
             android:layout_marginTop="130dp"
             app:srcCompat="@drawable/ic_ambulance_amico" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/enter"
             android:layout_width="177dp"
             android:layout_height="65dp"

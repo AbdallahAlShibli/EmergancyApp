@@ -49,7 +49,7 @@ When you call us we will be with you shortly"
             android:textColor="@color/white"
             android:textSize="17dp" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/emergency_call"
             android:layout_width="199dp"
             android:layout_height="203dp"

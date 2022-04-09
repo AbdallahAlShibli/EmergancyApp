@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
@@ -20,7 +21,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private MaterialButton emergency;
+    private Button emergency;
     private FirebaseFirestore Ff = FirebaseFirestore.getInstance();
     private FirebaseAuth FA = FirebaseAuth.getInstance();
     private FirebaseUser FU = FA.getCurrentUser();
