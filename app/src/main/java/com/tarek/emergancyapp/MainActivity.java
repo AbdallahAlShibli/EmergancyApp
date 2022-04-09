@@ -22,7 +22,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button emergency;
+    private Button emergency, signOut;
     private FirebaseFirestore Ff = FirebaseFirestore.getInstance();
     private FirebaseAuth FA = FirebaseAuth.getInstance();
     private FirebaseUser FU = FA.getCurrentUser();
@@ -33,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         emergency = findViewById(R.id.emergency_call);
+        signOut = findViewById(R.id.sign_out);
+
+        signOut.setOnClickListener(view -> {
+            FA.signOut();
+            startActivity(new Intent(getApplicationContext(), SplashActivity.class));
+        });
+
+
         emergency.setOnClickListener(view -> {
 
 
